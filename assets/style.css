@@ -1,11 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-    border: 1.5px solid black;
-
+    *{
+        margin: 3;
+        padding: 3;
+        box-sizing: border-box;
+        border: 1.5px solid black;
+        font-family: monospace;
+        color:rgb(16, 15, 13)
+    }
     
-    font-family: monospace;
-    color:antiquewhite
-}
+    body {
+        background-color: rgb(213, 209, 196); 
+        overflow: hidden; 
+    }
+    
+    p{
+        font-size: 1.3em;
+    } 
+    
+    button {
+        outline: none;
+        background-color: rgb(232, 228, 210);
+        font-size: 1.3em;
+    }
