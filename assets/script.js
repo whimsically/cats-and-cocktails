@@ -27,13 +27,13 @@ catDropDown.addEventListener("change", (event) => {
                 }
             }
         );
+    getRandomDrink();
 });
 
 
-const generateButton = document.getElementById('generateButton');
 const cocktailDetails = document.getElementById('cocktailDetails');
 
-generateButton.addEventListener('click', () => {
+function getRandomDrink() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then(response => response.json())
         .then(data => {
@@ -44,7 +44,7 @@ generateButton.addEventListener('click', () => {
                 cocktailDetails.innerHTML = 'No cocktail found.';
             }
         })
-});
+};
 
 function displayCocktail(cocktail) {
     cocktailDetails.innerHTML = `
@@ -70,4 +70,4 @@ function listIngredients(cocktail) {
         }
     }
     return ingredientsList;
-}
+}cd
