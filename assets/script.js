@@ -1,12 +1,10 @@
-//gets a cat image from the cat API and appends it to the document
-function getCat () {
-    var catImage = '';
-    //var catDesc = '';
-    var catImageEl = document.createElement("img");
+var catDropDown = document.getElementById("cats");
 
-    //currently using bengal as placeholder
-    //TODO: check for breed selected and use appropriate URL
-    fetch('https://api.thecatapi.com/v1/images/search?breed_ids=beng', {
+catDropDown.addEventListener("change", (event) => {
+    catID = event.target.value;
+    var catImage;
+    var catImageEl = document.createElement("img");
+    fetch('https://api.thecatapi.com/v1/images/search?breed_ids=' + catID, {
         'x-api-key' : 'live_dzFZqaVgKQBAScnhGBofCjWwQKgSKVTqFzeKy0TuyK0lFEOfK4Auoy6aFsTSWu5s'
     })
         .then(
@@ -29,6 +27,4 @@ function getCat () {
                 }
             }
         );
-}
-
-getCat();
+});
