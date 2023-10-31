@@ -17,10 +17,7 @@ catDropDown.addEventListener("change", (event) => {
                         catImage = data[0].url;
                         //adds url to "src" attribute
                         imgContainer.src = catImage;
-                        //appends image to body of document (TODO: change to inside container element)
-                        document.body.append(catImageEl);
                         });
-                
                 }
             }
         );
