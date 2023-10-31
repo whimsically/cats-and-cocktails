@@ -1,9 +1,8 @@
 var catDropDown = document.getElementById("cats");
+var imgContainer = document.getElementById("image-container");
 
 catDropDown.addEventListener("change", (event) => {
     catID = event.target.value;
-    var catImage;
-    var catImageEl = document.createElement("img");
     fetch('https://api.thecatapi.com/v1/images/search?breed_ids=' + catID, {
         'x-api-key' : 'live_dzFZqaVgKQBAScnhGBofCjWwQKgSKVTqFzeKy0TuyK0lFEOfK4Auoy6aFsTSWu5s'
     })
@@ -17,13 +16,8 @@ catDropDown.addEventListener("change", (event) => {
                         //image is stored in an array, so we need to access it with [0] index
                         catImage = data[0].url;
                         //adds url to "src" attribute
-                        catImageEl.setAttribute("src", catImage);
-                        //setting width of image to 200px
-                        catImageEl.setAttribute("width", "200px");
-                        //appends image to body of document (TODO: change to inside container element)
-                        document.body.append(catImageEl);
+                        imgContainer.src = catImage;
                         });
-                
                 }
             }
         );
