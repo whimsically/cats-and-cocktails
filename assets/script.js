@@ -1,5 +1,6 @@
 var catDropDown = document.getElementById("cats");
 var imgContainer = document.getElementById("image-container");
+var catDesc = document.getElementById("cat-desc");
 
 catDropDown.addEventListener("change", (event) => {
     catID = event.target.value;
@@ -22,6 +23,22 @@ catDropDown.addEventListener("change", (event) => {
             }
         );
     getRandomDrink();
+    
+    //fetches the breed data
+    fetch('https://api.thecatapi.com/v1/breeds', {
+            'x-api-key' : 'live_dzFZqaVgKQBAScnhGBofCjWwQKgSKVTqFzeKy0TuyK0lFEOfK4Auoy6aFsTSWu5s'
+    })
+        .then(response => response.json())
+        .then(data => {
+            //loops over breed data to find matching ID
+            //puts description in text element on page
+            for (i = 0; i < data.length; i++) {
+                if (data[i].id === catID) {
+                    catDesc.textContent = data[i].description;
+                    break;
+                }
+            }
+        })
 });
 
 
@@ -64,4 +81,4 @@ function listIngredients(cocktail) {
         }
     }
     return ingredientsList;
-}cd
+}
