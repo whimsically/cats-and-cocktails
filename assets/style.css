@@ -3,22 +3,49 @@
         margin: 3;
         padding: 3;
         box-sizing: border-box;
-        border: 1.5px solid black;
         font-family: monospace;
         color:rgb(16, 15, 13)
     }
     
     body {
-        background-color: rgb(213, 209, 196); 
+        background-color: rgb(180, 183, 225); 
         overflow: hidden; 
+        width: 90%;
+    }
+
+    select {
+        display:block;
+    }
+
+    label {
+        display: block;
     }
     
-    p{
+    .padding{
+        border: 1.5x solid rgb(94, 12, 90);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 1.3em;
+        padding-bottom: 20px;
+        
     } 
+    .Title{
+        text-decoration: underline;
+
+    }
+    h1, h2 {
+        color:rgb(69, 35, 98);
+        text-align: center;
+    }
     
-    button {
-        outline: none;
-        background-color: rgb(232, 228, 210);
-        font-size: 1.3em;
+    li{
+        list-style: none;
+    }
+    .inner-container {
+        background: rgb(211, 134, 164);
+        height: 100%;
+        width: 50%;
+        margin: 0 auto; 
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
     }
