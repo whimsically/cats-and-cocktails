@@ -17,12 +17,11 @@ When looking for a cat based on the breed you find interesting, a random cocktai
 
 ## Screen Shot: 
 
+<img src="assets\image.png">
 
 ## Sources:
 
 https://www.thecocktaildb.com/
-
-www.thecocktaildb.com/api/json/v1/1/random.php 
 
 https://purecss.io/forms/ 
 
